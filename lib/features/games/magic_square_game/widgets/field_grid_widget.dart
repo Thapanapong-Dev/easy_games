@@ -14,19 +14,19 @@ class FieldGridWidget extends StatelessWidget {
         defaultColumnWidth: FixedColumnWidth(23.w),
         children: const [
           TableRow(children: [
-            FieldWidget(index: 0),
-            FieldWidget(index: 1),
-            FieldWidget(index: 2),
+            FieldWidget(),
+            FieldWidget(),
+            FieldWidget(),
           ]),
           TableRow(children: [
-            FieldWidget(index: 3),
-            FieldWidget(index: 4),
-            FieldWidget(index: 5),
+            FieldWidget(),
+            FieldWidget(),
+            FieldWidget(),
           ]),
           TableRow(children: [
-            FieldWidget(index: 6),
-            FieldWidget(index: 7),
-            FieldWidget(index: 8),
+            FieldWidget(),
+            FieldWidget(),
+            FieldWidget(),
           ]),
         ],
       ),

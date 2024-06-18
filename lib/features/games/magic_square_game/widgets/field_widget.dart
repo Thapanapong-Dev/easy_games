@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class FieldWidget extends StatelessWidget {
-  const FieldWidget({super.key, required this.index});
-
-  final int index;
-
+  const FieldWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,8 +17,6 @@ class FieldWidget extends StatelessWidget {
         dashPattern: const [5, 5],
         child: Container(
           alignment: Alignment.center,
-          width: 90.w,
-          constraints: BoxConstraints(minHeight: 6.5.h),
           child: Text(
             'X',
             style: ES.textStyle.large(color: Theme.of(context).colorScheme.secondary),
