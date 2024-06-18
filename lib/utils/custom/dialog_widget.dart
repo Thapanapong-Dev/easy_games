@@ -1,6 +1,5 @@
 import 'package:easy_games/features/login/provider.dart';
 import 'package:easy_games/utils/constants/style.dart';
-import 'package:easy_games/utils/helper/function_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -21,9 +20,8 @@ class DialogWidget {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  foregroundColor:
-                      functionHelper.isDarkMode(context) ? ES.color.darkGrey : ES.color.lighterGrey,
-                  backgroundColor: functionHelper.isDarkMode(context) ? ES.color.lighterGrey : null,
+                  foregroundColor: Theme.of(context).colorScheme.surface,
+                  backgroundColor: Theme.of(context).colorScheme.secondary,
                 ),
                 child: const Text("change language <English>"),
               ),
@@ -36,7 +34,7 @@ class DialogWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: ES.color.red,
-                  backgroundColor: functionHelper.isDarkMode(context) ? ES.color.lighterGrey : null,
+                  backgroundColor: Theme.of(context).colorScheme.secondary,
                 ),
                 child: const Text("Logout"),
               ),

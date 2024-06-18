@@ -26,7 +26,7 @@ class GameListWidget extends StatelessWidget {
             const GameLabelWidget(title: 'Game 2', icon: Icons.grid_on_outlined),
           ]),
           const TableRow(children: [
-            GameLabelWidget(title: 'Game 3', icon: Icons.grid_on_outlined),
+            GameLabelWidget(title: 'Game 3: Thapanapong', icon: Icons.grid_on_outlined),
             GameLabelWidget(title: 'Game 4', icon: Icons.grid_on_outlined),
           ]),
           const TableRow(children: [

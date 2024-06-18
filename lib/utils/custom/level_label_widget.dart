@@ -2,20 +2,21 @@ import 'package:easy_games/utils/constants/style.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class NumberBoxWidget extends StatelessWidget {
-  const NumberBoxWidget({super.key, required this.index});
+class LevelLabelWidget extends StatelessWidget {
+  const LevelLabelWidget({super.key, required this.title, this.onPressed});
 
-  final int index;
+  final String title;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20.w,
+      height: 33.w,
       padding: EdgeInsets.all(1.w),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(foregroundColor: ES.color.lighterGrey),
-        child: Text(index.toString()),
+        child: Text(title),
       ),
     );
   }

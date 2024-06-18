@@ -1,3 +1,4 @@
+import 'package:easy_games/features/games/magic_square_game/views/game_view.dart';
 import 'package:easy_games/features/games/magic_square_game/views/menu_view.dart';
 import 'package:easy_games/features/home/home_view.dart';
 import 'package:easy_games/features/login/login_view.dart';
@@ -9,12 +10,7 @@ import 'package:go_router/go_router.dart';
 
 final _key = GlobalKey<NavigatorState>();
 
-enum AppRoute {
-  splashPage,
-  loginPage,
-  homePage,
-  magicSquareMenuPage,
-}
+enum AppRoute { splashPage, loginPage, homePage, magicSquareMenuPage, magicSquareGamePage }
 
 final routerProvider = Provider<GoRouter>((ref) {
   final authState = ref.watch(authProvider);
@@ -59,6 +55,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         name: AppRoute.magicSquareMenuPage.name,
         builder: (context, state) {
           return const MagicSquareMenuPage();
+        },
+      ),
+      GoRoute(
+        path: '/${AppRoute.magicSquareGamePage.name}',
+        name: AppRoute.magicSquareGamePage.name,
+        builder: (context, state) {
+          return const MagicSquareGamePage();
         },
       ),
     ],

@@ -42,7 +42,7 @@ class GlobalThemData {
   static final ColorScheme darkColorScheme = ColorScheme(
     primary: ES.color.darkerGrey,
     onPrimary: ES.color.orange,
-    secondary: ES.color.darkerGrey,
+    secondary: ES.color.lighterGrey,
     onSecondary: ES.color.orange,
     surface: ES.color.darkGrey,
     onSurface: ES.color.grey,

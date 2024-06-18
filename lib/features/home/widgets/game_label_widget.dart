@@ -19,9 +19,19 @@ class GameLabelWidget extends StatelessWidget {
         style: ElevatedButton.styleFrom(foregroundColor: ES.color.lighterGrey),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(title),
-            Icon(icon),
+            SizedBox(
+              width: 28.w,
+              child: Text(
+                title,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+                style: TextStyle(fontSize: ES.size.small),
+              ),
+            ),
+            SizedBox(width: 1.w),
+            Icon(icon, size: ES.size.large),
           ],
         ),
       ),
